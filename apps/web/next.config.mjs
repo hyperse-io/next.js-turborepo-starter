@@ -34,7 +34,6 @@ const buildEnv = getNextConfigEnv(
  */
 const config = {
   reactStrictMode: true,
-  basePath: '/web',
   output: buildEnv.NEXT_BUILD_ENV_OUTPUT,
   webpack(config) {
     if (isDev) {
