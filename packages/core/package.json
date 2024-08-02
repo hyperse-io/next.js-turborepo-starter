@@ -2,7 +2,7 @@
   "name": "@hyperse/core",
   "version": "0.0.1",
   "private": true,
-  "repository": "https://github.com/hyperse-io/nextjs-monorepo-starter",
+  "repository": "https://github.com/hyperse-io/next.js-turborepo-starter",
   "license": "MIT",
   "sideEffects": false,
   "type": "module",

@@ -1,4 +1,4 @@
-# nextjs-monorepo
+# next.js-monorepo-starter
 
 Best practices on using Next.js in a TypeScript monorepo
 
@@ -37,7 +37,7 @@ the `paths` tsconfig.json also can be resolved for `apps/*`, we should avoid to 
 
 If you are looking for single repo next.js best practices starter please see below link
 
-https://github.com/hyperse-io/next.js-starter
+https://github.com/hyperse-io/next.js-turborepo-starter
 
 ### Remote Caching
 

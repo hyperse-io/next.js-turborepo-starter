@@ -1,7 +1,7 @@
 {
   "name": "next.js-monorepo-starter",
   "private": true,
-  "repository": "https://github.com/hyperse-io/next.js-monorepo-starter",
+  "repository": "https://github.com/hyperse-io/next.js-turborepo-starter",
   "description": "Best practices on using Next.js in a TypeScript monorepo",
   "type": "module",
   "keywords": [

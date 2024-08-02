@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "repository": "https://github.com/hyperse-io/nextjs-monorepo-starter",
+  "repository": "https://github.com/hyperse-io/next.js-turborepo-starter",
   "license": "MIT",
   "scripts": {
     "build": "next build",
