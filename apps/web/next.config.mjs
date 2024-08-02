@@ -1,3 +1,4 @@
+import { PHASE_PRODUCTION_BUILD } from 'next/constants.js';
 import withNextIntl from 'next-intl/plugin';
 import { codeInspectorPlugin } from 'code-inspector-plugin';
 import { z } from 'zod';
@@ -50,6 +51,12 @@ const config = {
   },
 };
 
-export default getNextConfig(
-  plugins.reduce((config, plugin) => plugin(config), config)
-);
+export default (phase) => {
+  const isProd = phase === PHASE_PRODUCTION_BUILD;
+  return getNextConfig(
+    plugins.reduce((config, plugin) => plugin(config), {
+      ...config,
+      basePath: isProd ? '/web' : '',
+    })
+  );
+};
