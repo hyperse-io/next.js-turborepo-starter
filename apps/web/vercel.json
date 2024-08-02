@@ -1,3 +1,10 @@
 {
-  "ignoreCommand": "yarn dlx turbo-ignore"
+  "ignoreCommand": "yarn dlx turbo-ignore",
+  "rewrites": [
+    { "source": "/turborepo/", "destination": "https://tools.hyperse.net/" },
+    {
+      "source": "/turborepo/:match*",
+      "destination": "https://tools.hyperse.net/:match*"
+    }
+  ]
 }
