@@ -17,6 +17,11 @@ export default function middleware(req: NextRequest) {
 
 export const config = {
   // Skip all paths that should not be internationalized
-  matcher: ['/((?!api|_next|.*\\..*).*)'],
+  matcher: [
+    // This entry handles the root of the base
+    // path and should always be included
+    '/',
+    '/((?!api|_next|.*\\..*).*)',
+  ],
   runtime: 'nodejs',
 };

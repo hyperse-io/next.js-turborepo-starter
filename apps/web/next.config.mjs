@@ -1,4 +1,3 @@
-import { PHASE_PRODUCTION_BUILD } from 'next/constants.js';
 import withNextIntl from 'next-intl/plugin';
 import { codeInspectorPlugin } from 'code-inspector-plugin';
 import { z } from 'zod';
@@ -35,6 +34,7 @@ const buildEnv = getNextConfigEnv(
  */
 const config = {
   reactStrictMode: true,
+  basePath: '/web',
   output: buildEnv.NEXT_BUILD_ENV_OUTPUT,
   webpack(config) {
     if (isDev) {
@@ -51,12 +51,8 @@ const config = {
   },
 };
 
-export default (phase) => {
-  const isProd = phase === PHASE_PRODUCTION_BUILD;
-  return getNextConfig(
-    plugins.reduce((config, plugin) => plugin(config), {
-      ...config,
-      basePath: isProd ? '/web' : '',
-    })
-  );
-};
+export default getNextConfig(
+  plugins.reduce((config, plugin) => plugin(config), {
+    ...config,
+  })
+);
