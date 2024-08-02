@@ -1,6 +1,6 @@
 {
   "name": "@hyperse/utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "repository": "https://github.com/hyperse-io/next.js-turborepo-starter",
   "license": "MIT",
