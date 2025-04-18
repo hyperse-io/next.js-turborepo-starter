@@ -1,14 +1,14 @@
 import withNextIntl from 'next-intl/plugin';
 import { codeInspectorPlugin } from 'code-inspector-plugin';
 import { z } from 'zod';
-import { getNextConfig, getNextConfigEnv } from '@hyperse-io/next-env';
+import { getNextConfig, getNextConfigEnv } from '@hyperse/next-env';
 import bundleAnalyzer from '@next/bundle-analyzer';
 
 const plugins = [];
 const isDev = process.env.NODE_ENV === 'development';
 
 plugins.push(
-  withNextIntl('./src/i18n.ts'),
+  withNextIntl(),
   bundleAnalyzer({
     enabled: process.env.ANALYZE === 'true',
   })
@@ -35,6 +35,14 @@ const buildEnv = getNextConfigEnv(
 const config = {
   reactStrictMode: true,
   output: buildEnv.NEXT_BUILD_ENV_OUTPUT,
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
   webpack(config) {
     if (isDev) {
       config.plugins.push(

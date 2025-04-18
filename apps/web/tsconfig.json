@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -15,13 +14,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": "./src",
     "paths": {
-      "@/navigation": ["./src/navigation"],
-      "@/features": ["./src/features/index"],
-      "@/features/*": ["./src/features/*"],
-      "@/components": ["./src/components/index"],
-      "@/components/*": ["./src/components/*"],
-      "@/public/*": ["./public/*"]
+      "@/*": ["./*"],
+      "@/public/*": ["../public/*"]
     },
     "types": ["vitest/globals"],
     "plugins": [

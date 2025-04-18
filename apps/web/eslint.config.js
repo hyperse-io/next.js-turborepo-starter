@@ -1,7 +1,7 @@
-import { defineConfig, reactjs } from '@hyperse/eslint-config-hyperse';
+import { defineConfig, nextjs } from '@hyperse/eslint-config-hyperse';
 
 export default defineConfig([
-  ...reactjs,
+  ...nextjs,
   {
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',

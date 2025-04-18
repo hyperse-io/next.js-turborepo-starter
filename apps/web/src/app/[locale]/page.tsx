@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'use-intl';
 import { Home } from '@/features/Home/Home';
 import Logo from '@/public/logo.svg';
+import { ThemeSwitcher } from '@hyperse/core';
 import { matchingTextColor, randomColor } from '@hyperse/utils';
-import { Page } from '@vercel/examples-ui';
 
 export default function Index() {
   const [bgColor, setBgColor] = useState('');
@@ -15,12 +16,17 @@ export default function Index() {
     setTextColor(matchingTextColor(bg));
   };
 
+  const t = useTranslations('Index');
   useEffect(changeColor, []);
 
   return (
-    <Page>
+    <div>
       <Home bgColor={bgColor} textColor={textColor} changeColor={changeColor} />
       <Logo className="w-32" />
-    </Page>
+      <main className="dark text-foreground bg-background">
+        <div className="text-primary-600">Hello hero {t('headline')}</div>
+        <ThemeSwitcher />
+      </main>
+    </div>
   );
 }

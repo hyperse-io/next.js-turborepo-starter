@@ -1,4 +1,7 @@
 {
+  "Index": {
+    "headline": "Headline"
+  },
   "Error": {
     "title": "服务器错误!",
     "description": "喝杯咖啡休息一下。喝完咖啡就应该恢复了",

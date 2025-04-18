@@ -1,5 +1,10 @@
-declare type PageProps<Param = {}> = {
-  params: { locale: string } & Param;
+declare type PageProps<
+  Param = {
+    //
+  },
+> = {
+  params: Promise<{ locale: string } & Param>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 // For CSS

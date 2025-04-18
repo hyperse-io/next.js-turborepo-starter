@@ -1,12 +1,8 @@
 import { type NextRequest } from 'next/server';
 import createIntlMiddleware from 'next-intl/middleware';
-import { locales } from './navigation';
+import { routing } from './i18n/routing';
 
-const intlMiddleware = createIntlMiddleware({
-  locales,
-  localePrefix: 'as-needed',
-  defaultLocale: 'en',
-});
+const intlMiddleware = createIntlMiddleware(routing);
 
 // Note that this callback is only invoked if
 // the `authorized` callback has returned `true`
@@ -23,5 +19,4 @@ export const config = {
     '/',
     '/((?!api|_next|.*\\..*).*)',
   ],
-  runtime: 'nodejs',
 };

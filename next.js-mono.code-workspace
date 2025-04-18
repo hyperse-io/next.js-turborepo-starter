@@ -23,7 +23,8 @@
   ],
   "extensions": {
     "recommendations": [
-      "dbaeumer.vscode-eslint"
+      "dbaeumer.vscode-eslint",
+      "Lokalise.i18n-ally"
     ],
   },
   "settings": {
@@ -63,8 +64,7 @@
     "[json]": {
       "editor.formatOnSave": false
     },
-    "i18n-ally.localesPaths": [
-      "i18n"
-    ],
+    "i18n-ally.localesPaths": ["messages"], // E.g. "./messages"
+    "i18n-ally.keyStyle": "nested"
   },
 }
