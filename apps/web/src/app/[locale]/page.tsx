@@ -23,7 +23,7 @@ export default function Index() {
     <div>
       <Home bgColor={bgColor} textColor={textColor} changeColor={changeColor} />
       <Logo className="w-32" />
-      <main className="dark text-foreground bg-background">
+      <main className="bg-background text-foreground dark">
         <div className="text-primary-600">Hello hero {t('headline')}</div>
         <ThemeSwitcher />
       </main>

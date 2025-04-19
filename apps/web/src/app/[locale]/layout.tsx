@@ -28,7 +28,7 @@ export default async function LocaleLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        <Providers>
+        <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
           <NextIntlClientProvider messages={messages} locale={locale}>
             {children}
           </NextIntlClientProvider>

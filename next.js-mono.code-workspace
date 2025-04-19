@@ -35,9 +35,7 @@
       "source.organizeImports": "never",
       "source.removeUnusedImports": "always",
     },
-    "files.associations": {
-      "*.css": "tailwindcss",
-    },
+    
     // Disable vscode formatting for js,jsx,ts,tsx files
     // to allow dbaeumer.vscode-eslint to format them
     "[javascript]": {
@@ -57,6 +55,21 @@
       "./packages/core",
       "./packages/utils",
     ],
+    "files.associations": {
+      "*.css": "tailwindcss",
+    },
+    "editor.quickSuggestions": {
+      "strings": "on"
+    },
+    "tailwindCSS.classFunctions": ["tw", "clsx", "twMerge", "extendVariants"],
+    "tailwindCSS.classAttributes": [
+      "className",
+      "classNames"
+    ],
+    "tailwindCSS.experimental.configFile": {
+      "apps/web/src/app/globals.css": "apps/web/src/**",
+      "apps/docs/src/app/globals.css": "apps/docs/src/**",
+    },
     "typescript.tsdk": "root/node_modules/typescript/lib",
     "[jsonc]": {
       "editor.formatOnSave": false

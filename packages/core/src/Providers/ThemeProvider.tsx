@@ -1,13 +1,18 @@
 'use client';
+import type { ReactNode } from 'react';
+import type { ThemeProviderProps as NextThemesProviderProps } from 'next-themes';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { HeroUIProvider } from '@heroui/react';
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export interface ThemeProviderProps {
+  children: ReactNode;
+  themeProps?: NextThemesProviderProps;
+}
+
+export function ThemeProvider({ children, themeProps }: ThemeProviderProps) {
   return (
     <HeroUIProvider>
-      <NextThemesProvider attribute="class" defaultTheme="dark">
-        {children}
-      </NextThemesProvider>
+      <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
     </HeroUIProvider>
   );
 }
