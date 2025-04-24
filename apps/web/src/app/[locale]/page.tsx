@@ -6,6 +6,7 @@ import { Home } from '@/features/Home/Home';
 import Logo from '@/public/logo.svg';
 import { ThemeSwitcher } from '@hyperse/core';
 import { matchingTextColor, randomColor } from '@hyperse/utils';
+import { NestedModal } from './NestedModal';
 
 export default function Index() {
   const [bgColor, setBgColor] = useState('');
@@ -26,6 +27,7 @@ export default function Index() {
       <main className="bg-background text-foreground dark">
         <div className="text-primary-600">Hello hero {t('headline')}</div>
         <ThemeSwitcher />
+        <NestedModal variant="primary" />
       </main>
     </div>
   );
